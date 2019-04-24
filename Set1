@@ -1,0 +1,30 @@
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Set<Cat> cats = createCats();
+
+        Iterator <Cat> iterator = cats.iterator();
+        Cat catToRemove = iterator.next();
+        cats.remove(catToRemove);
+
+        printCats(cats);
+    }
+
+    public static Set<Cat> createCats() {
+        Set<Cat> cats = new HashSet<>();
+        for (int i = 0; i<3; i++)
+           cats.add(new Cat());
+        return cats;
+    }
+
+    public static void printCats(Set<Cat> cats) {
+        for (Cat x : cats)
+            System.out.println(x);// step 4 - пункт 4
+    }
+    public static class Cat{
+
+    }
